@@ -1,32 +1,36 @@
 package Mycode;
-import java.util.Map;
 
 public abstract class ProjectItem {
     private final String name;
-    private String description;
+    private String details;
+    private final double rate;
 
+    public ProjectItem(String name, String details, double rate) {
 
-    public ProjectItem(String name, String description) {
-
-        if (name == "" || description == "" ) {
+        if (name == "" || details == "" || rate < 0) {
             throw new IllegalArgumentException("");
         }
-        if (name == null || description == null) {
+        if (name == null || details == null) {
             throw new NullPointerException("");
         }
 
         this.name = name;
-        this.description = description;
-
+        this.details = details;
+        this.rate = rate;
     }
 
-    public String getName() {
-        return name;
+
+    public void setDetails(String newDetails) {
+        this.details = newDetails;
     }
 
-    public String getDescription() {
-        return description;
+    public abstract double getTimeRequired();
+
+    public abstract long getMaterialCost();
+
+    public long getCostEstimate() {
+        return Math.round(rate * getTimeRequired() + getMaterialCost());
     }
+
+
 }
-
-
