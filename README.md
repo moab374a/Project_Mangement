@@ -1,5 +1,9 @@
 # Project_Mangement
 
+
+![ProjectManagement_ClassDiagram](https://user-images.githubusercontent.com/44247875/107162570-80b79500-69a4-11eb-864d-b4927faa18f6.jpg)
+
+
 Here we’ve got a sample Factory which can produce the following Parts: Components, SingleComponent and Resource. Upon calling createPart(), it would create a part. The class Part represents what all parts have in common, and therefore is abstract. A Factory has a ReceivingStock, which is a type of Stock and a Purchasing department which performs actions on its stock as required (here: buy()).
 
 A Stock‘s Parts are managed with a java.util.Map<Part, Integer>. This map has all Parts on the stock as keys, and their respective amounts as values. The following methods operate on this map:
