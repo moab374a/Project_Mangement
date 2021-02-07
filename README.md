@@ -1,4 +1,4 @@
-# Project_Mangement
+# Project_Mangement (Observer Design Pattern)
 
 
 ![ProjectManagement_ClassDiagram](https://user-images.githubusercontent.com/44247875/107162570-80b79500-69a4-11eb-864d-b4927faa18f6.jpg)
